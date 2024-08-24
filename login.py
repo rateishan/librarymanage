@@ -6,7 +6,8 @@ class LoginPage:
     def __init__(self, root):
         self.root = root
         self.root.title("Login")
-        self.root.geometry("400x300")
+        self.root.geometry("1000x600+80+80")
+        self.root.config(bg="gray")
 
         # Username Label and Entry
         self.lbl_username = Label(self.root, text="Username:", font=("Arial", 14))
@@ -24,12 +25,15 @@ class LoginPage:
         self.btn_login = Button(self.root, text="Login", command=self.login, font=("Arial", 14))
         self.btn_login.pack(pady=20)
 
+        labal=Label(self.root,text="LIBRARY MANAGEMENT SYSTEM",font=("Arial", 20))
+        labal.pack(pady=20)
+
     def login(self):
         username = self.entry_username.get()
         password = self.entry_password.get()
 
         # Simple authentication logic (Replace with your actual authentication)
-        if username == "admin" and password == "password":
+        if username == "admin" and password == "44":
             messagebox.showinfo("Login Successful", "Welcome!")
             self.open_dashboard()
         else:
