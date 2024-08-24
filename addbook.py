@@ -184,7 +184,7 @@ class addbookclass:
         self.var_author.set(""),
         self.var_catagory.set(""),
         self.var_rack.set(""),
-        #self.var_date.set("")
+        self.var_date.set("")
             
         
 

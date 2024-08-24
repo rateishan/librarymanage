@@ -57,12 +57,18 @@ class dashboard:
     def reminder(self):
         self.new_win=Toplevel(self.root)
         self.new_obj=reminderclass(self.new_win)
+    
     def exit(self):
-        root.destroy()
+        self.root.destroy()
 
 
+def run_dashboard():
+    root = Tk()
+    obj = dashboard(root)
+    root.mainloop()
 
-if __name__=="__main__":
-    root=Tk()
-    obj=dashboard(root)
-    root.mainloop()    
+# If this file is executed directly, run the dashboard
+if __name__ == "__main__":
+    run_dashboard()
+
+
